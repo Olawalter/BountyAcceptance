@@ -1,0 +1,148 @@
+13:03:00 contract 0xe7B6309C6813224D44822C84747E0b76539e84b6 phase wallets
+13:03:00 phase wallets
+13:03:03     faucet:sponsor HELD {"funded": "200000000000000000"}
+13:03:06     faucet:stranger HELD {"funded": "10000000000000000"}
+13:03:08     faucet:d01 HELD {"funded": "10000000000000000"}
+13:03:10     faucet:d02 HELD {"funded": "10000000000000000"}
+13:03:13     faucet:d03 HELD {"funded": "10000000000000000"}
+13:03:15     faucet:d04 HELD {"funded": "10000000000000000"}
+13:03:18     faucet:d05 HELD {"funded": "10000000000000000"}
+13:03:20     faucet:d06 HELD {"funded": "10000000000000000"}
+13:03:22     faucet:d07 HELD {"funded": "10000000000000000"}
+13:03:24     faucet:d08 HELD {"funded": "10000000000000000"}
+13:03:26     faucet:d09 HELD {"funded": "10000000000000000"}
+13:03:28     faucet:d10 HELD {"funded": "10000000000000000"}
+13:03:28 summary {"steps": 12, "transactions": 12, "outcomes_checked": 12, "outcomes_held": 12, "missed": [], "refusals": 0, "refusals_held": 0}
+13:03:45 contract 0xe7B6309C6813224D44822C84747E0b76539e84b6 phase bounties
+13:03:45 phase bounties
+13:03:45   create:cancelled_funded: create_bounty as sponsor
+13:04:25     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+13:04:30     create:cancelled_funded HELD {"bounty_id": "BNT-000001", "bounty_hash": "6fa872713234cbbd0d7dec42cb07ef03cce09910b0893d9747fdd802718eae88"}
+13:04:30   fund:cancelled_funded: fund as sponsor with 20000000000000000 atto
+13:05:12     FINALIZED/SUCCESS votes agree,agree,agree,idle,agree
+13:05:14     fund:cancelled_funded HELD {"status": "FUNDED"}
+13:05:14   create:cancelled_unfunded: create_bounty as sponsor
+13:05:54     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+13:05:59     create:cancelled_unfunded HELD {"bounty_id": "BNT-000002", "bounty_hash": "4fb38d62177bcf80936f6e98022d45b7c9d816d153877e41be1c82a4f109f448"}
+13:05:59   create:doubt_lost: create_bounty as sponsor
+13:06:46     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+13:06:51     create:doubt_lost HELD {"bounty_id": "BNT-000003", "bounty_hash": "9a51a14803c09b08f88ea0a91924ba294d890168a6047e5b7367e895e36e1651"}
+13:06:51   fund:doubt_lost: fund as sponsor with 20000000000000000 atto
+13:07:30     FINALIZED/SUCCESS votes idle,idle,agree,agree,agree
+13:07:32     fund:doubt_lost HELD {"status": "FUNDED"}
+13:07:32   create:doubt_restored: create_bounty as sponsor
+13:08:11     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+13:08:17     create:doubt_restored HELD {"bounty_id": "BNT-000004", "bounty_hash": "494f0b18d056543fcbe02d0c79cc0d58a0d08668cac72e9057fa7c2382113944"}
+13:08:17   fund:doubt_restored: fund as sponsor with 20000000000000000 atto
+13:08:55     FINALIZED/SUCCESS votes agree,agree,agree,idle,agree
+13:08:57     fund:doubt_restored HELD {"status": "FUNDED"}
+13:08:57   create:queue: create_bounty as sponsor
+13:09:35     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+13:09:41     create:queue HELD {"bounty_id": "BNT-000005", "bounty_hash": "9ab26e750def31b9debb60a537b69d6bacba27e1caf252ecaae93cd878cb8c5d"}
+13:09:41   fund:queue: fund as sponsor with 20000000000000000 atto
+13:10:21     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+13:10:23     fund:queue HELD {"status": "FUNDED"}
+13:10:23   create:returned: create_bounty as sponsor
+13:11:01     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+13:11:07     create:returned HELD {"bounty_id": "BNT-000006", "bounty_hash": "41a6528457ce28ecef84cbc59e1741c3cd8376d8e7fd5ab7f852a63c7f5c5fc2"}
+13:11:07   fund:returned: fund as sponsor with 20000000000000000 atto
+13:11:48     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+13:11:50     fund:returned HELD {"status": "FUNDED"}
+13:11:50   cancel:cancelled_unfunded: cancel as sponsor
+13:12:29     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+13:12:31     cancel:cancelled_unfunded HELD {"status": "CANCELLED", "closed_by": "CANCELLED_BEFORE_FUNDING"}
+13:12:31   cancel:cancelled_funded: cancel as sponsor
+13:13:16     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+13:13:17     cancel:cancelled_funded HELD {"status": "RETURNED", "closed_by": "CANCELLED_BEFORE_ANY_SUBMISSION"}
+13:13:17 summary {"steps": 25, "transactions": 25, "outcomes_checked": 25, "outcomes_held": 25, "missed": [], "refusals": 0, "refusals_held": 0}
+13:13:38 contract 0xe7B6309C6813224D44822C84747E0b76539e84b6 phase submit
+13:13:38 phase submit
+13:13:50     outage:serving HELD {}
+13:13:50   submit:Q1: submit as d01 with 1000000000000000 atto
+13:14:29     FINALIZED/SUCCESS votes agree,agree,idle,agree,agree
+13:14:34     submit:Q1 HELD {"sequence": 1, "read_by": "2026-10-05T14:13:57Z"}
+13:14:34   submit:Q2: submit as d02 with 1000000000000000 atto
+13:15:18     FINALIZED/SUCCESS votes agree,agree,agree,idle,agree
+13:15:25     submit:Q2 HELD {"sequence": 2, "read_by": "2026-10-05T14:14:41Z"}
+13:15:25   submit:Q3: submit as d03 with 1000000000000000 atto
+13:16:10     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+13:16:18     submit:Q3 HELD {"sequence": 3, "read_by": "2026-10-05T14:15:32Z"}
+13:16:18   submit:R1: submit as d04 with 1000000000000000 atto
+13:17:06     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+13:17:11     submit:R1 HELD {"sequence": 1, "read_by": "2026-10-05T13:16:25Z"}
+13:17:11   submit:R2: submit as d05 with 1000000000000000 atto
+13:17:51     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+13:17:57     submit:R2 HELD {"sequence": 2, "read_by": "2026-10-05T13:17:18Z"}
+13:17:57   submit:R3: submit as d06 with 1000000000000000 atto
+13:18:36     FINALIZED/SUCCESS votes idle,agree,agree,agree,agree
+13:18:45     submit:R3 HELD {"sequence": 3, "read_by": "2026-10-05T13:18:04Z"}
+13:18:45   submit:R4: submit as d07 with 1000000000000000 atto
+13:19:30     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+13:19:47     submit:R4 HELD {"sequence": 4, "read_by": "2026-10-05T13:18:57Z"}
+13:19:47   submit:R5: submit as d08 with 1000000000000000 atto
+13:20:26     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+13:20:38     submit:R5 HELD {"sequence": 5, "read_by": "2026-10-05T13:19:54Z"}
+13:20:38   submit:D1: submit as d09 with 1000000000000000 atto
+13:21:22     FINALIZED/SUCCESS votes agree,agree,agree,idle,agree
+13:21:27     submit:D1 HELD {"sequence": 1, "read_by": "2026-10-05T13:20:45Z"}
+13:21:27   submit:D2: submit as d10 with 1000000000000000 atto
+13:22:06     FINALIZED/SUCCESS votes agree,agree,agree,agree,agree
+13:22:11     submit:D2 HELD {"sequence": 1, "read_by": "2026-10-05T13:21:34Z"}
+13:22:11 summary {"steps": 36, "transactions": 35, "outcomes_checked": 36, "outcomes_held": 36, "missed": [], "refusals": 0, "refusals_held": 0}
+13:22:29 contract 0xe7B6309C6813224D44822C84747E0b76539e84b6 phase evaluate
+13:22:29 phase evaluate
+13:22:29   evaluate:Q2: evaluate as keeper
+13:23:19     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+13:23:22     evaluate:Q2 HELD {"expected_outcome": "ACCEPTED", "expected_states": {"r1": "MET", "r2": "MET", "r3": "MET", "r4": "MET", "r5": "MET"}}
+13:23:22   evaluate:Q3: evaluate as keeper
+13:24:19     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+13:24:22     evaluate:Q3 HELD {"expected_outcome": "ACCEPTED", "expected_states": {"r1": "MET", "r2": "MET", "r3": "MET", "r4": "MET", "r5": "MET"}}
+13:24:22   evaluate:R1: evaluate as keeper
+13:25:18     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+13:25:22     evaluate:R1 HELD {"expected_outcome": "REJECTED", "expected_states": {"r1": "MET", "r2": "MET", "r3": "MET", "r4": "MET", "r5": "NOT_MET"}}
+13:25:22   evaluate:R2: evaluate as keeper
+13:26:12     FINALIZED/SUCCESS votes agree,agree,idle,agree,idle
+13:26:16     evaluate:R2 HELD {"expected_outcome": "REJECTED", "expected_states": {"r1": "MET", "r2": "NOT_MET", "r3": "MET", "r4": "MET", "r5": "MET"}}
+13:26:16   evaluate:R3: evaluate as keeper
+13:27:01     FINALIZED/SUCCESS votes agree,agree,agree,idle,idle
+13:27:05     evaluate:R3 HELD {"expected_outcome": "REJECTED", "expected_states": {"r1": "MET", "r2": "MET", "r3": "MET", "r4": "MET", "r5": "NOT_MET"}}
+13:27:05   evaluate:R5: evaluate as keeper
+13:27:56     FINALIZED/SUCCESS votes agree,idle,agree,agree,idle
+13:27:59     evaluate:R5 HELD {"expected": "recorded, not applied", "reason": "ENDPOINT_UNREACHABLE"}
+13:27:59   evaluate:D1: evaluate as keeper
+13:28:50     FINALIZED/SUCCESS votes idle,agree,idle,agree,agree
+13:28:54     evaluate:D1 HELD {"expected_outcome": "ACCEPTED", "expected_states": {"r1": "MET", "r2": "MET", "r3": "MET", "r4": "MET", "r5": "MET"}}
+13:28:54   evaluate:D2: evaluate as keeper
+13:29:45     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+13:29:48     evaluate:D2 HELD {"expected_outcome": "ACCEPTED", "expected_states": {"r1": "MET", "r2": "MET", "r3": "MET", "r4": "MET", "r5": "MET"}}
+13:29:48 summary {"steps": 44, "transactions": 43, "outcomes_checked": 44, "outcomes_held": 44, "missed": [], "refusals": 0, "refusals_held": 0}
+13:30:10 contract 0xe7B6309C6813224D44822C84747E0b76539e84b6 phase contest
+13:30:10 phase contest
+13:30:10   contest:Q2: contest as sponsor
+13:31:43     FINALIZED/SUCCESS votes agree,agree,idle,idle,agree
+13:31:48     contest:Q2 HELD {"expected_outcome": "ACCEPTED", "expected_states": {"r1": "MET", "r2": "MET", "r3": "MET", "r4": "MET", "r5": "MET"}}
+13:31:48   contest:R1: contest as d04
+13:32:53     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+13:32:57     contest:R1 HELD {"expected_outcome": "REJECTED", "expected_states": {"r1": "MET", "r2": "MET", "r3": "MET", "r4": "MET", "r5": "NOT_MET"}}
+13:32:57 summary {"steps": 46, "transactions": 45, "outcomes_checked": 46, "outcomes_held": 46, "missed": [], "refusals": 0, "refusals_held": 0}
+13:33:22 contract 0xe7B6309C6813224D44822C84747E0b76539e84b6 phase outage
+13:33:22 phase outage
+13:33:34     outage:down HELD {}
+13:33:34   contest:D1: contest as sponsor
+13:34:18     FINALIZED/SUCCESS votes agree,idle,agree,idle,agree
+13:34:21     contest:D1 HELD {"expected": "recorded, not applied", "reason": "EVIDENCE_UNREADABLE"}
+13:34:23     contest:D1 HELD {"in_doubt": true, "verdict": "ACCEPTED"}
+13:34:23   contest:D2: contest as sponsor
+13:35:08     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+13:35:12     contest:D2 HELD {"expected": "recorded, not applied", "reason": "EVIDENCE_UNREADABLE"}
+13:35:14     contest:D2 HELD {"in_doubt": true, "verdict": "ACCEPTED"}
+13:35:14   refuse:contest_in_doubt: expecting a refusal of contest
+13:35:59     refused
+13:35:59   refuse:restore_by_another: expecting a refusal of restore
+13:36:44     refused
+13:36:54     outage:restored HELD {}
+13:36:54   restore:D1: restore as d09
+13:37:46     FINALIZED/SUCCESS votes agree,idle,idle,agree,agree
+13:37:49     restore:D1 HELD {"expected_outcome": "ACCEPTED", "expected_states": {"r1": "MET", "r2": "MET", "r3": "MET", "r4": "MET", "r5": "MET"}}
+13:37:51     restore:D1 HELD {"in_doubt": false, "verdict": "ACCEPTED"}
+13:37:51 summary {"steps": 53, "transactions": 50, "outcomes_checked": 51, "outcomes_held": 51, "missed": [], "refusals": 2, "refusals_held": 2}

@@ -1,0 +1,347 @@
+339 mutations, 0 anchor problems
+carried over from earlier passes on the same contract: all of them, each killed
+accept-control: unmodified copy must pass ...
+control green; 0 mutations over 1 job(s)
+
+
+killed:   actions: a developer contests a rejection
+killed:   actions: a sponsor contests an acceptance
+killed:   actions: cancel before any submission
+killed:   actions: close after the deadline with nothing open
+killed:   actions: evaluate while readable and rounds are left
+killed:   actions: finalize waits for an earlier submission
+killed:   actions: fund while the deadline leaves time
+killed:   actions: lapse after the read-by time
+killed:   actions: restore while in doubt and rounds are left
+killed:   actions: submit while places are open
+killed:   bounty: a JSON shape is one of three
+killed:   bounty: a bond is at most the reward
+killed:   bounty: a bond is not negative
+killed:   bounty: a check has exactly its keys
+killed:   bounty: a check names a listed field
+killed:   bounty: a check names a listed field (inherited)
+killed:   bounty: a check reads a field every deliverable has
+killed:   bounty: a document check reads a document
+killed:   bounty: a field has a type
+killed:   bounty: a field id is distinct and not reserved
+killed:   bounty: a field type from the list
+killed:   bounty: a judged requirement needs a required document
+killed:   bounty: a momentary status is not named
+killed:   bounty: a passage has a word
+killed:   bounty: a path begins with a slash and is bounded
+killed:   bounty: a path has no dot-segments
+killed:   bounty: a path is plain
+killed:   bounty: a redirect is not named
+killed:   bounty: a required passage that contains a forbidden one
+killed:   bounty: a requirement has exactly its keys
+killed:   bounty: a status a check names is one a service can be asked for
+killed:   bounty: a title carries nothing unseen
+killed:   bounty: a word count is bounded
+killed:   bounty: an endpoint carries no query string
+killed:   bounty: an endpoint check calls an endpoint
+killed:   bounty: an exact value does not address the evaluator
+killed:   bounty: an exact value has no space at its ends
+killed:   bounty: an exact value is bounded
+killed:   bounty: an exact value is printable ASCII
+killed:   bounty: an optional document does not carry a judged requirement
+killed:   bounty: contradictory checks are refused
+killed:   bounty: documents are hosted somewhere named
+killed:   bounty: endpoints are bounded
+killed:   bounty: exactly its keys
+killed:   bounty: fields are counted by type
+killed:   bounty: host lists are bounded and well formed
+killed:   bounty: nothing a reader cannot see
+killed:   bounty: required is a boolean
+killed:   bounty: requirements are bounded
+killed:   bounty: submit_by is a time
+killed:   bounty: the contest window is bounded
+killed:   bounty: the reward is bounded
+killed:   bounty: the shortest window is one a party can act in
+killed:   bounty: windows are bounded
+killed:   call: a failed fetch is no answer
+killed:   call: a large body is not looked at
+killed:   call: a momentary refusal is no answer
+killed:   call: a server error is no answer
+killed:   call: each URL once
+killed:   call: nothing once a document is unreadable
+killed:   call: the path is the bounty's
+killed:   call: what is not a status is no answer and is recorded as none
+killed:   cancel: a funded bounty gives its reward back
+killed:   cancel: not once somebody has submitted
+killed:   cancel: only the sponsor
+killed:   check: NaN is not JSON
+killed:   check: NaN is not JSON in an answer
+killed:   check: a JSON array is an array
+killed:   check: a JSON object is an object
+killed:   check: a body check needs a 200
+killed:   check: a body that was not read meets nothing
+killed:   check: a byte-order mark is not part of a JSON document
+killed:   check: a byte-order mark is not part of an answer
+killed:   check: a class holds one Latin letter
+killed:   check: a document that is not there meets nothing
+killed:   check: a document's words are taken once
+killed:   check: a file that does not parse is not JSON
+killed:   check: a key is in an object
+killed:   check: a letter and its other case are one letter
+killed:   check: a pair read by its capital has its reading
+killed:   check: a pair read by its small letter has its reading
+killed:   check: a passage is found by its words
+killed:   check: a passage is there or is not
+killed:   check: a word spelled with both letters of a pair has its reading
+killed:   check: absence is not shown by a part
+killed:   check: an answer that is not JSON
+killed:   check: an answer's shape
+killed:   check: an exact string
+killed:   check: at least that many words
+killed:   check: circled letters do not hide a word
+killed:   check: enough words
+killed:   check: fullwidth letters do not hide a word
+killed:   check: letterlike symbols are read as their letters
+killed:   check: lookalike letters do not hide a word
+killed:   check: mathematical letters do not hide a word
+killed:   check: no answer meets nothing
+killed:   check: the exact status
+killed:   close: not over an open submission
+killed:   close: only a funded bounty
+killed:   close: only after the deadline
+killed:   close: the reward goes back
+killed:   compare: a round that decides nothing is agreed by its reason
+killed:   compare: the consequence
+killed:   compare: the evidence
+killed:   compare: the gate
+killed:   compare: the markers
+killed:   compare: the reason a round decides nothing
+killed:   compare: what a node could do with a document
+killed:   compare: what it leads to
+killed:   compare: what was read
+killed:   compare: what was read of a document
+killed:   compare: whether each call was answered
+killed:   conflict: a body check needs a 200
+killed:   conflict: a required passage that holds a forbidden one
+killed:   conflict: an answer is one shape
+killed:   conflict: an array has no keys
+killed:   conflict: one path one status
+killed:   conflict: only on one field
+killed:   conflict: only on one path
+killed:   conflict: the same check twice
+killed:   contest: a developer contests a rejection
+killed:   contest: a developer's unreachable contest raises no doubt
+killed:   contest: a read contest is used
+killed:   contest: a round is counted
+killed:   contest: a sponsor contests an acceptance
+killed:   contest: an unreachable deliverable puts an acceptance in doubt
+killed:   contest: an unusable answer raises no doubt
+killed:   contest: each doubt has its own restore rounds
+killed:   contest: every round starts the window again
+killed:   contest: not while in doubt
+killed:   contest: one read contest each
+killed:   contest: only an evaluated submission
+killed:   contest: only inside the window
+killed:   contest: only the two parties
+killed:   contest: rounds are capped
+killed:   contest: the sponsor's round is the sponsor's
+killed:   count: Tibetan punctuation separates
+killed:   count: a Han or kana character is a word
+killed:   count: a comma or letter leads into no thousands number
+killed:   count: a point stays inside a number
+killed:   count: a sign written on a letter stays in its word
+killed:   count: a thousands comma stays inside a number
+killed:   count: an apostrophe stays inside a word
+killed:   count: any other comma separates two values
+killed:   count: one apostrophe to a word
+killed:   create: a deadline is not too far
+killed:   create: a deadline leaves time
+killed:   credit: what is owed goes up
+killed:   derive: an unreachable deliverable decides nothing
+killed:   derive: an unusable answer decides nothing
+killed:   derive: an unusable answer decides nothing (inherited)
+killed:   end with the bounty: in doubt it is gone
+killed:   end with the bounty: one that held a place is outrun
+killed:   end with the bounty: one that held none is not outrun
+killed:   end with the bounty: unread it was never read
+killed:   end: a bond comes back when paid or outrun
+killed:   end: a bond is forfeit when rejected or never read
+killed:   end: a doubt ends with the submission
+killed:   end: a forfeit bond goes to the sponsor
+killed:   end: a verdict that rests on no reading has no reading time
+killed:   end: a verdict that rests on no reading has no record
+killed:   end: the developer may submit again
+killed:   end: the submission leaves the open list
+killed:   escrow: what leaves is no longer held
+killed:   evaluate: a reading clears the open round
+killed:   evaluate: a reading clears what the last round could not do
+killed:   evaluate: a reading clears when the last round failed
+killed:   evaluate: a round is counted
+killed:   evaluate: a round that decides nothing is on the record
+killed:   evaluate: a round that decides nothing leaves it submitted
+killed:   evaluate: after an unreachable deliverable the retries are the developer's
+killed:   evaluate: after an unusable answer the retries are the two parties'
+killed:   evaluate: an unusable answer after a missing one is timed
+killed:   evaluate: going missing again starts a new grace
+killed:   evaluate: only a submitted submission
+killed:   evaluate: only until the read-by time
+killed:   evaluate: rounds are capped
+killed:   evaluate: still not being there buys no more grace
+killed:   evaluate: when a round decided nothing is kept
+killed:   evaluate: why a round decided nothing is kept
+killed:   fetch: a status that is not one is recorded as none
+killed:   finalize: a rejection is not paid
+killed:   finalize: an acceptance in doubt is rejected
+killed:   finalize: an earlier submission is first in line
+killed:   finalize: only after the window
+killed:   finalize: only an evaluated submission
+killed:   finalize: the bounty is released
+killed:   finalize: the other open submissions end with the bounty
+killed:   finalize: the reward goes to the developer
+killed:   fund: exactly the reward
+killed:   fund: not when the deadline is near
+killed:   fund: only a created bounty
+killed:   fund: only the sponsor
+killed:   fund: the reward is held
+killed:   gate: a MET quotes
+killed:   gate: a body check met needs a 200 on record
+killed:   gate: a call not made has no status
+killed:   gate: a check is code's
+killed:   gate: a check is recomputed
+killed:   gate: a judged finding is the panel's
+killed:   gate: a probe is the call the requirement makes
+killed:   gate: a probe result from the list
+killed:   gate: a probe's numbers are numbers in range
+killed:   gate: a quote is in this node's text
+killed:   gate: a quote is one grounded passage
+killed:   gate: a round that decides nothing reports no findings
+killed:   gate: a status does not contradict a RESPONDS state
+killed:   gate: a stored quote is clean
+killed:   gate: a title that cannot be encoded is refused
+killed:   gate: an answer has an answer's status
+killed:   gate: an unfetched source carries nothing
+killed:   gate: calls are made exactly when the documents were read
+killed:   gate: every call was made or none
+killed:   gate: exactly the payload's keys
+killed:   gate: markers are strings before they are sorted
+killed:   gate: no reading where code decided
+killed:   gate: one finding for each requirement
+killed:   gate: one probe for every call
+killed:   gate: one source for each document
+killed:   gate: only MET carries quotes
+killed:   gate: the address that answered is one of the document's
+killed:   gate: the leader's payload is parsed
+killed:   gate: the reason is recomputed
+killed:   gate: this round of this submission
+killed:   header: a header value that is bytes is read
+killed:   lapse: an unreachable deliverable is named
+killed:   lapse: nobody asking is named
+killed:   lapse: only a submitted submission
+killed:   lapse: only after the read-by time
+killed:   mirror: addresses are capped
+killed:   mirror: no URL twice
+killed:   mirror: not a URL twice
+killed:   mirror: not once final
+killed:   mirror: on a host the bounty allows
+killed:   mirror: only a document
+killed:   mirror: only the developer
+killed:   panel: a quote is clean before it is kept
+killed:   panel: a skipped requirement is no answer
+killed:   panel: a state nobody defined is no answer
+killed:   panel: only so many cuts are tried
+killed:   panel: only so many quotes are tried
+killed:   place: a rejection already contested holds none
+killed:   place: a rejection holds only inside its window
+killed:   place: a rejection with no contest round left holds none
+killed:   place: an acceptance holds until it is finalized
+killed:   place: an acceptance in doubt past its window holds none
+killed:   place: an acceptance in doubt with no restore round left holds none
+killed:   place: an unusable answer costs no place
+killed:   place: asked for and not there holds none after the grace
+killed:   place: asked for and not there keeps it through the grace
+killed:   place: no round left holds none
+killed:   place: only an earlier submission is first
+killed:   place: the grace runs from the round that found it missing
+killed:   place: unread holds its place
+killed:   place: unread holds until its read-by time
+killed:   read: every address is tried
+killed:   read: one unfetched document makes the round unreadable
+killed:   read: only the pinned bytes are the evidence
+killed:   read: the budget not needed by a short file goes to a long one
+killed:   read: the panel is told when it sees a part
+killed:   read: the panel reads its share and no more
+killed:   record: a round that decides nothing is not applied
+killed:   record: a round that decides nothing records only what was agreed
+killed:   record: no marker from a round that decides nothing
+killed:   record: the ratified payload is gated again
+killed:   refuse: value attached goes back
+killed:   refuse: with no value it fails
+killed:   restore: a deliverable still unreachable stays in doubt
+killed:   restore: a deliverable that is back is out of doubt whatever the model says
+killed:   restore: a reading answers the sponsor's contest
+killed:   restore: a round is counted
+killed:   restore: only a reading answers the sponsor's contest
+killed:   restore: only an acceptance in doubt
+killed:   restore: only inside the window
+killed:   restore: only the developer
+killed:   restore: rounds are capped
+killed:   restore: the window starts again
+killed:   round: a MET that shows nothing is not met
+killed:   round: a document that addresses the evaluator earns no reading
+killed:   round: a quote is grounded
+killed:   round: a reading has its time
+killed:   round: a spliced quote is dropped
+killed:   round: a state is one of the two
+killed:   round: an unanswered call decides nothing
+killed:   round: an unreadable document decides nothing
+killed:   round: documents with no text earn no reading
+killed:   round: half an answer is no answer
+killed:   round: no panel for checks alone
+killed:   round: no panel where code decided
+killed:   round: the panel is not shown the endpoint
+killed:   round: the panel judges only the judged
+killed:   submission: a base leaves room for the paths
+killed:   submission: a base with or without its slash is one base
+killed:   submission: a digest is a digest
+killed:   submission: a document keeps to the document hosts
+killed:   submission: addresses are bounded
+killed:   submission: an empty file is no document
+killed:   submission: an endpoint carries no query
+killed:   submission: an endpoint has its own hosts
+killed:   submission: an endpoint runs where the bounty allows
+killed:   submission: every required field
+killed:   submission: every required field is there
+killed:   submission: exactly its keys
+killed:   submission: no URL twice
+killed:   submission: only listed fields
+killed:   submission: the commitment covers the endpoint
+killed:   submission: two documents are two files
+killed:   submit: attempts are capped
+killed:   submit: exactly the bond
+killed:   submit: not after the deadline
+killed:   submit: not the sponsor
+killed:   submit: one open submission each
+killed:   submit: only to a funded bounty
+killed:   submit: open submissions are capped
+killed:   submit: the bond is held
+killed:   submit: the read-by time is fixed at submission
+killed:   text: JSON escapes only in a document that is JSON
+killed:   text: a Han or kana character is a word of a passage
+killed:   text: a block tag separates
+killed:   text: a control character is nothing
+killed:   text: a custom element is not a block
+killed:   text: a dropped box leaves a gap
+killed:   text: a dropped script leaves nothing
+killed:   text: a letter that renders as a gap is the gap
+killed:   text: an escaped backslash begins no escape
+killed:   text: an inline tag does not split a word
+killed:   text: characters that take no space are removed
+killed:   text: control and line-separator characters
+killed:   text: more characters that take no space
+killed:   text: no party text addresses the evaluator
+killed:   text: the published markers are matched
+killed:   url: a last label that begins with a digit is no name
+killed:   verdict: every requirement must be met
+killed:   view: a balance is read by its lowercase address
+killed:   view: a page is bounded
+killed:   withdraw: nothing to withdraw
+killed:   withdraw: the balance is cleared
+killed:   withdraw: the wallet is paid
+killed:   withdraw: what is owed goes down
+
+mutations: 339 killed, 0 survived, 0 anchor missing

@@ -1,0 +1,856 @@
+{
+ "address": "0xf5E1002f13d5431a75B1ED16220ac6A4c54A7757",
+ "finished_at": "2026-10-05T15:01:44Z",
+ "order": [
+  "faucet:sponsor",
+  "faucet:stranger",
+  "faucet:d01",
+  "faucet:d02",
+  "faucet:d03",
+  "faucet:d04",
+  "faucet:d05",
+  "faucet:d06",
+  "faucet:d07",
+  "faucet:d08",
+  "faucet:d09",
+  "faucet:d10",
+  "create:cancelled_funded",
+  "fund:cancelled_funded",
+  "create:cancelled_unfunded",
+  "create:doubt_lost",
+  "fund:doubt_lost",
+  "create:doubt_restored",
+  "fund:doubt_restored",
+  "create:queue",
+  "fund:queue",
+  "create:returned",
+  "fund:returned",
+  "cancel:cancelled_unfunded",
+  "cancel:cancelled_funded",
+  "outage:serving",
+  "submit:Q1",
+  "submit:Q2",
+  "submit:Q3",
+  "submit:R1",
+  "submit:R2",
+  "submit:R3",
+  "submit:R4",
+  "submit:R5",
+  "submit:D1",
+  "submit:D2",
+  "evaluate:Q2",
+  "evaluate:Q3"
+ ],
+ "raw_base": "https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/",
+ "started_at": "2026-10-05T12:39:39Z",
+ "steps": {
+  "cancel:cancelled_funded": {
+   "args": [
+    "BNT-000001"
+   ],
+   "at": "2026-10-05T12:49:41Z",
+   "closed_by": "CANCELLED_BEFORE_ANY_SUBMISSION",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "cancel",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"RETURNED\\\"\"}}",
+   "status": "RETURNED",
+   "step": "cancel:cancelled_funded",
+   "tx": "0xb80f908a56677cb5fd2ea12ae3983735559f1a810998c3fda8ab804ff5eaf2bb",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "cancel:cancelled_unfunded": {
+   "args": [
+    "BNT-000002"
+   ],
+   "at": "2026-10-05T12:49:01Z",
+   "closed_by": "CANCELLED_BEFORE_FUNDING",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "cancel",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"CANCELLED\\\"\"}}",
+   "status": "CANCELLED",
+   "step": "cancel:cancelled_unfunded",
+   "tx": "0xe7e21d80214946aa82c4938a076843b3a6d24614eb2884437ee2dd6085d4ccd2",
+   "value": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:cancelled_funded": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 900, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_wi... (1534 characters)"
+   ],
+   "at": "2026-10-05T12:41:01Z",
+   "bounty_hash": "06be12ac94334737711892087b5b335c7e304c55e81e2097b1e22702df31ed17",
+   "bounty_id": "BNT-000001",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "funded, then given up before any submission",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000001\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:cancelled_funded",
+   "submit_by": "2026-10-08T12:40:16Z",
+   "tx": "0xd623427fb8bb4475f95b714905662a637ae12484c2670044c1b48e8e06ecbdec",
+   "value": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:cancelled_unfunded": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 900, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_wi... (1534 characters)"
+   ],
+   "at": "2026-10-05T12:42:29Z",
+   "bounty_hash": "a7376afcfea836b490ee62b2e46c52d8184e4265417ab9ec7435398b16a05103",
+   "bounty_id": "BNT-000002",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "given up before it was funded",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000002\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:cancelled_unfunded",
+   "submit_by": "2026-10-08T12:41:42Z",
+   "tx": "0x3676e8f1c82cea2139364543c2281a5c403f0e66ca4689fdb17fff445917e957",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:doubt_lost": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 1800, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_w... (1535 characters)"
+   ],
+   "at": "2026-10-05T12:43:14Z",
+   "bounty_hash": "ca70eb697e9a64afc588c2c2575ab7d84cff49fb06ec2ad5bed1d6441a3ab49b",
+   "bounty_id": "BNT-000003",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "an acceptance put in doubt and never restored",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000003\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:doubt_lost",
+   "submit_by": "2026-10-05T14:07:29Z",
+   "tx": "0x1776a14098e78d4f12717066cc67cefdf8fb0c5d8525d55adc6da465eb3dd379",
+   "value": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:doubt_restored": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 1800, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_w... (1535 characters)"
+   ],
+   "at": "2026-10-05T12:44:42Z",
+   "bounty_hash": "4dbfe49b6190f19f08eff11ff32fb4e275c77077d5b1a4abbde0f733ff71b61e",
+   "bounty_id": "BNT-000004",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "an acceptance put in doubt and restored",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000004\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:doubt_restored",
+   "submit_by": "2026-10-08T12:43:56Z",
+   "tx": "0x748d1e709912a414698254ef5610b2b5c7a634bbb0e9551bfbf0c0d791ba55ef",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:queue": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 900, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_wi... (1534 characters)"
+   ],
+   "at": "2026-10-05T12:46:10Z",
+   "bounty_hash": "11e51b713bdca5623d5cc7e7470670fe193ced63f594e7a1ad3b224f4b01a994",
+   "bounty_id": "BNT-000005",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "three submissions, the second is paid",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000005\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:queue",
+   "submit_by": "2026-10-08T12:45:25Z",
+   "tx": "0xd08824a7f24f22239e55daf6d16f7d89c6fd5d74d7568b51d9886c310baf1c4f",
+   "value": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:returned": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 900, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_wi... (1534 characters)"
+   ],
+   "at": "2026-10-05T12:47:38Z",
+   "bounty_hash": "f3c2367e7628f238c959a054035113e5527df115d1eeecd0fdf64b6005af0515",
+   "bounty_id": "BNT-000006",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "five submissions, none accepted: the reward goes back",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000006\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:returned",
+   "submit_by": "2026-10-05T14:11:52Z",
+   "tx": "0xc475fb6ba79275df4fc7a7143845e2512cb5c2a79e028276c6cc6005e7b9d0a8",
+   "value": "0",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "evaluate:Q2": {
+   "applied": true,
+   "args": [
+    "SUB-000002"
+   ],
+   "at": "2026-10-05T12:58:50Z",
+   "evaluation_id": "EV-000001",
+   "expected_outcome": "ACCEPTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "evaluate",
+   "mode": "EVALUATE",
+   "note": "second in the queue and satisfies every requirement: the sponsor contests, the reading is upheld, and once the first can no longer be accepted it is paid the whole reward",
+   "observed_outcome": "ACCEPTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000001\\\"\"}}",
+   "round": 1,
+   "served_by": [
+    "https://cdn.jsdelivr.net/gh/Olawalter/BountyAcceptance@57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/evidence/docs-complete.html"
+   ],
+   "status": "FINALIZED",
+   "step": "evaluate:Q2",
+   "tx": "0xad223f8069f210260e504c6606ed9020d6e20b15571d863eb1b91079f027c53d",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "keeper"
+  },
+  "evaluate:Q3": {
+   "args": [
+    "SUB-000003"
+   ],
+   "at": "2026-10-05T15:01:44Z",
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "evaluate",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000002\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "evaluate:Q3",
+   "tx": "0x67e4c9d8430d3caa9dc86b4a4dae46b6152420dc676f12876fa1bd21b7ba070c",
+   "value": "0",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "keeper"
+  },
+  "faucet:d01": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:39:56Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d01",
+   "tx": "0x4100310b8a1754122b56e1271034fc68c727ffd44d6078360e3af9739be4500e"
+  },
+  "faucet:d02": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:39:58Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d02",
+   "tx": "0x076e9891e153e4339c7fa6d524186b59562cf0c1463ee0def1f069c82afa5522"
+  },
+  "faucet:d03": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:40:00Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d03",
+   "tx": "0x021f8ec348f6cbcb50da7d0119a1400d2f300b54c43c619a0952c25adfb10d80"
+  },
+  "faucet:d04": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:40:03Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d04",
+   "tx": "0xc9f68bf7b7b439311cfd32042afb6abc5be7dd7bf8e38e4de2849b2496aa1867"
+  },
+  "faucet:d05": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:40:05Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d05",
+   "tx": "0xf8856a53e33555c7592b178d9112ca46679735064e252b60df20aa358897a263"
+  },
+  "faucet:d06": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:40:07Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d06",
+   "tx": "0xc437e2328ed0218b82521df62e74b3989ea400f441332ead6abc41bfc7607f3c"
+  },
+  "faucet:d07": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:40:09Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d07",
+   "tx": "0x2a29180ec276170cbfd5a82e64539fd99b0e0692746485fb79688b25bd4f4cb1"
+  },
+  "faucet:d08": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:40:11Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d08",
+   "tx": "0x40dd8d3089e8643fa72a6e9d5a89667ced98c631bc82d93e975fdd9923b75863"
+  },
+  "faucet:d09": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:40:13Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d09",
+   "tx": "0x9658106fdb152a805e2f6b4cc7fa5138aec17fd7caee06bc62b29fa89aaa244f"
+  },
+  "faucet:d10": {
+   "after": "19000000000000000",
+   "at": "2026-10-05T12:40:16Z",
+   "before": "9000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d10",
+   "tx": "0x0408cba93214caa4db15240d1bbd927d498492a2524b0d9e0af09337269658a7"
+  },
+  "faucet:sponsor": {
+   "after": "300000000000000000",
+   "at": "2026-10-05T12:39:51Z",
+   "before": "100000000000000000",
+   "funded": "200000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:sponsor",
+   "tx": "0x4951b9fceb93e2c51f5d831091a8c09f472a9650d2056a898ddfda023831fd32"
+  },
+  "faucet:stranger": {
+   "after": "20000000000000000",
+   "at": "2026-10-05T12:39:53Z",
+   "before": "10000000000000000",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:stranger",
+   "tx": "0x940979492a8bda0fb38bc85a4b5486d831c90ff6e3f5156201a99622f39b5b98"
+  },
+  "fund:cancelled_funded": {
+   "args": [
+    "BNT-000001"
+   ],
+   "at": "2026-10-05T12:41:42Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:cancelled_funded",
+   "tx": "0x86d9ae90e82872df797eb6882cf789684954f31659c28a4c9e7435e5a0281984",
+   "value": "20000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "fund:doubt_lost": {
+   "args": [
+    "BNT-000003"
+   ],
+   "at": "2026-10-05T12:43:56Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:doubt_lost",
+   "tx": "0x8cb7a81a9a668bfbe9105e6f022dee719ec190af4e173775eb462c0a6ae9483e",
+   "value": "20000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "fund:doubt_restored": {
+   "args": [
+    "BNT-000004"
+   ],
+   "at": "2026-10-05T12:45:25Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:doubt_restored",
+   "tx": "0x89b136f53e259070f935329d7e3a38e199858681a9b58d102ba9648498e9227d",
+   "value": "20000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "sponsor"
+  },
+  "fund:queue": {
+   "args": [
+    "BNT-000005"
+   ],
+   "at": "2026-10-05T12:46:52Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:queue",
+   "tx": "0x39782b1c0362d13669e843df465ac0ab2dd034d77267a350a8b0fb997c0ac278",
+   "value": "20000000000000000",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "fund:returned": {
+   "args": [
+    "BNT-000006"
+   ],
+   "at": "2026-10-05T12:48:20Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:returned",
+   "tx": "0x4cec47a84c670a9fcfdd2cc96650806a030f66cb7b11c6fad7250bda6e494e22",
+   "value": "20000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "outage:serving": {
+   "at": "2026-10-05T12:49:54Z",
+   "held": true,
+   "kind": "check",
+   "note": "the branch serves both documents",
+   "step": "outage:serving"
+  },
+  "submit:D1": {
+   "args": [
+    "BNT-000004",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"97a59ee2009bf3f8dd82addfc6340e6c3863d1... (358 characters)"
+   ],
+   "at": "2026-10-05T12:57:01Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:56:24Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000009\\\"\"}}",
+   "sequence": 1,
+   "status": "FINALIZED",
+   "step": "submit:D1",
+   "submission_id": "SUB-000009",
+   "tx": "0x03ac51feda920cf78a787639eb1c57944061b6776099d90728f60c5595e27219",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d09"
+  },
+  "submit:D2": {
+   "args": [
+    "BNT-000003",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"a070e0157aa735dc8ae0a43fb98bd7cb734d0f... (358 characters)"
+   ],
+   "at": "2026-10-05T12:57:52Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:57:09Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000010\\\"\"}}",
+   "sequence": 1,
+   "status": "FINALIZED",
+   "step": "submit:D2",
+   "submission_id": "SUB-000010",
+   "tx": "0xeffb6acef7ff7d4983b0e23e164ef8931f3b483537e37c0bcb14cfce7808e822",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "d10"
+  },
+  "submit:Q1": {
+   "args": [
+    "BNT-000005",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/absent\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f... (520 characters)"
+   ],
+   "at": "2026-10-05T12:50:38Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T14:50:01Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000001\\\"\"}}",
+   "sequence": 1,
+   "status": "FINALIZED",
+   "step": "submit:Q1",
+   "submission_id": "SUB-000001",
+   "tx": "0x949acc1aeba4ed7edef4ede83587e4cf00250d7e78f9b1807b9a59e81e2c8f2f",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "wallet": "d01"
+  },
+  "submit:Q2": {
+   "args": [
+    "BNT-000005",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f52... (518 characters)"
+   ],
+   "at": "2026-10-05T12:51:24Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T14:50:45Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000002\\\"\"}}",
+   "sequence": 2,
+   "status": "FINALIZED",
+   "step": "submit:Q2",
+   "submission_id": "SUB-000002",
+   "tx": "0x298c2d36fb82e126ce46525b13cd256f4cb24a12aebbbfa4f7461930defd4ed2",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d02"
+  },
+  "submit:Q3": {
+   "args": [
+    "BNT-000005",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f52... (518 characters)"
+   ],
+   "at": "2026-10-05T12:52:14Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T14:51:30Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000003\\\"\"}}",
+   "sequence": 3,
+   "status": "FINALIZED",
+   "step": "submit:Q3",
+   "submission_id": "SUB-000003",
+   "tx": "0x43f35290818f632d9f67951a6900b766ae20899cc6b26f5b3636811efad707e8",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d03"
+  },
+  "submit:R1": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"7e56e1c42371ab457f78c2ab7dc5c106bcd041... (510 characters)"
+   ],
+   "at": "2026-10-05T12:52:58Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:52:21Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000004\\\"\"}}",
+   "sequence": 1,
+   "status": "FINALIZED",
+   "step": "submit:R1",
+   "submission_id": "SUB-000004",
+   "tx": "0x2b9ad20660ec37efd4aaa9118b8fadf147b21a9b6d334f7cbaa02da02c2c910a",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "d04"
+  },
+  "submit:R2": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/nokey\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f5... (519 characters)"
+   ],
+   "at": "2026-10-05T12:53:49Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:53:05Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000005\\\"\"}}",
+   "sequence": 2,
+   "status": "FINALIZED",
+   "step": "submit:R2",
+   "submission_id": "SUB-000005",
+   "tx": "0xf25fbde2b7b08651065e3a3f78c1ff02cea1f5260ec052f28adb54eba7ddf99b",
+   "value": "1000000000000000",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "d05"
+  },
+  "submit:R3": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"d6d1d8caa18a3304841db7bba24274a382e0ce... (516 characters)"
+   ],
+   "at": "2026-10-05T12:54:37Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:53:56Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000006\\\"\"}}",
+   "sequence": 3,
+   "status": "FINALIZED",
+   "step": "submit:R3",
+   "submission_id": "SUB-000006",
+   "tx": "0xaa119e19a51502a54a4e838bcd308340ec5887b1b61827d32b877e266453a515",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "d06"
+  },
+  "submit:R4": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f52... (518 characters)"
+   ],
+   "at": "2026-10-05T12:55:26Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:54:44Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000007\\\"\"}}",
+   "sequence": 4,
+   "status": "FINALIZED",
+   "step": "submit:R4",
+   "submission_id": "SUB-000007",
+   "tx": "0x60f928a53d5ec7f2bf973afe720b6b73b921a6bef7f944367c68c6ed38d8b623",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d07"
+  },
+  "submit:R5": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://no-such-service.cdn.jsdelivr.net/timetable\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f52e616a294949d74e1efc22ccbdc\", \"urls\": [\"https://cdn.jsdelivr.net/gh/Ol... (449 characters)"
+   ],
+   "at": "2026-10-05T12:56:16Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:55:33Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000008\\\"\"}}",
+   "sequence": 5,
+   "status": "FINALIZED",
+   "step": "submit:R5",
+   "submission_id": "SUB-000008",
+   "tx": "0x98e0d930695f239f8ef5cb781dcfc50ccc4045df13c3d6b55131f02b6849932b",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "d08"
+  }
+ },
+ "summary": {
+  "missed": [],
+  "outcomes_checked": 37,
+  "outcomes_held": 37,
+  "refusals": 0,
+  "refusals_held": 0,
+  "steps": 38,
+  "transactions": 37
+ }
+}

@@ -1,0 +1,1529 @@
+{
+ "address": "0xe7B6309C6813224D44822C84747E0b76539e84b6",
+ "finished_at": "2026-10-05T12:37:51Z",
+ "order": [
+  "faucet:sponsor",
+  "faucet:stranger",
+  "faucet:d01",
+  "faucet:d02",
+  "faucet:d03",
+  "faucet:d04",
+  "faucet:d05",
+  "faucet:d06",
+  "faucet:d07",
+  "faucet:d08",
+  "faucet:d09",
+  "faucet:d10",
+  "create:cancelled_funded",
+  "fund:cancelled_funded",
+  "create:cancelled_unfunded",
+  "create:doubt_lost",
+  "fund:doubt_lost",
+  "create:doubt_restored",
+  "fund:doubt_restored",
+  "create:queue",
+  "fund:queue",
+  "create:returned",
+  "fund:returned",
+  "cancel:cancelled_unfunded",
+  "cancel:cancelled_funded",
+  "outage:serving",
+  "submit:Q1",
+  "submit:Q2",
+  "submit:Q3",
+  "submit:R1",
+  "submit:R2",
+  "submit:R3",
+  "submit:R4",
+  "submit:R5",
+  "submit:D1",
+  "submit:D2",
+  "evaluate:Q2",
+  "evaluate:Q3",
+  "evaluate:R1",
+  "evaluate:R2",
+  "evaluate:R3",
+  "evaluate:R5",
+  "evaluate:D1",
+  "evaluate:D2",
+  "contest:Q2",
+  "contest:R1",
+  "outage:down",
+  "contest:D1",
+  "contest:D2",
+  "refuse:contest_in_doubt",
+  "refuse:restore_by_another",
+  "outage:restored",
+  "restore:D1"
+ ],
+ "raw_base": "https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/",
+ "started_at": "2026-10-05T12:02:50Z",
+ "steps": {
+  "cancel:cancelled_funded": {
+   "args": [
+    "BNT-000001"
+   ],
+   "at": "2026-10-05T12:13:17Z",
+   "closed_by": "CANCELLED_BEFORE_ANY_SUBMISSION",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "cancel",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"RETURNED\\\"\"}}",
+   "status": "RETURNED",
+   "step": "cancel:cancelled_funded",
+   "tx": "0x3c9f5e54bd289f51f63b9092c0140612e9feff0da958b3569fa485b392cbf10f",
+   "value": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "cancel:cancelled_unfunded": {
+   "args": [
+    "BNT-000002"
+   ],
+   "at": "2026-10-05T12:12:31Z",
+   "closed_by": "CANCELLED_BEFORE_FUNDING",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "cancel",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"CANCELLED\\\"\"}}",
+   "status": "CANCELLED",
+   "step": "cancel:cancelled_unfunded",
+   "tx": "0x96fcdbe131596ea1ef2bfbda55f56212ef210119c03e83970cc1d38167aa1815",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "contest:D1": {
+   "applied": false,
+   "args": [
+    "SUB-000009"
+   ],
+   "at": "2026-10-05T12:34:23Z",
+   "evaluation_id": "EV-000011",
+   "expected": "recorded, not applied",
+   "held": true,
+   "in_doubt": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "contest",
+   "mode": "CONTEST",
+   "note": "accepted; the documentation is then taken down and the sponsor contests: the acceptance is in doubt until the developer brings the document back and a round reads it again, and then it is paid",
+   "observed_outcome": "DELIVERABLE_UNAVAILABLE",
+   "observed_reason": "EVIDENCE_UNREADABLE",
+   "observed_states": {},
+   "panel_state": "SKIPPED",
+   "probes": [
+    "NOT_ASKED",
+    "NOT_ASKED",
+    "NOT_ASKED"
+   ],
+   "reason": "EVIDENCE_UNREADABLE",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000011\\\"\"}}",
+   "round": 2,
+   "served_by": [
+    ""
+   ],
+   "status": "FINALIZED",
+   "step": "contest:D1",
+   "tx": "0x7493b7e4b3379439637032923842c8c9fe4279139a2e01407f5f2fecd72681bf",
+   "value": "0",
+   "verdict": "ACCEPTED",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "contest:D2": {
+   "applied": false,
+   "args": [
+    "SUB-000010"
+   ],
+   "at": "2026-10-05T12:35:14Z",
+   "evaluation_id": "EV-000012",
+   "expected": "recorded, not applied",
+   "held": true,
+   "in_doubt": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "contest",
+   "mode": "CONTEST",
+   "note": "accepted; the documentation is then taken down, the sponsor contests, and it never comes back: still in doubt when the window ends, it is rejected",
+   "observed_outcome": "DELIVERABLE_UNAVAILABLE",
+   "observed_reason": "EVIDENCE_UNREADABLE",
+   "observed_states": {},
+   "panel_state": "SKIPPED",
+   "probes": [
+    "NOT_ASKED",
+    "NOT_ASKED",
+    "NOT_ASKED"
+   ],
+   "reason": "EVIDENCE_UNREADABLE",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000012\\\"\"}}",
+   "round": 2,
+   "served_by": [
+    ""
+   ],
+   "status": "FINALIZED",
+   "step": "contest:D2",
+   "tx": "0x61ee20a582c6bbf2ae6684a8bf7f0e166287fd45e351deb7be23322b9e70ceef",
+   "value": "0",
+   "verdict": "ACCEPTED",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "contest:Q2": {
+   "applied": true,
+   "args": [
+    "SUB-000002"
+   ],
+   "at": "2026-10-05T12:31:48Z",
+   "evaluation_id": "EV-000009",
+   "expected_outcome": "ACCEPTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "contest",
+   "mode": "CONTEST",
+   "note": "second in the queue and satisfies every requirement: the sponsor contests, the reading is upheld, and once the first can no longer be accepted it is paid the whole reward",
+   "observed_outcome": "ACCEPTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000009\\\"\"}}",
+   "round": 2,
+   "served_by": [
+    "https://cdn.jsdelivr.net/gh/Olawalter/BountyAcceptance@57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/evidence/docs-complete.html"
+   ],
+   "status": "FINALIZED",
+   "step": "contest:Q2",
+   "tx": "0x6fcb295a4b90350fb73932600130ed41a5f8afa5d30fd036c3d51d9c77c49d6e",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "contest:R1": {
+   "applied": true,
+   "args": [
+    "SUB-000004"
+   ],
+   "at": "2026-10-05T12:32:57Z",
+   "evaluation_id": "EV-000010",
+   "expected_outcome": "REJECTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "NOT_MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "contest",
+   "mode": "CONTEST",
+   "note": "the service runs, the documentation never says how a client authenticates: rejected on the judged requirement, contested by the developer, rejected again",
+   "observed_outcome": "REJECTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "NOT_MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000010\\\"\"}}",
+   "round": 2,
+   "served_by": [
+    "https://cdn.jsdelivr.net/gh/Olawalter/BountyAcceptance@57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/evidence/docs-thin.html"
+   ],
+   "status": "FINALIZED",
+   "step": "contest:R1",
+   "tx": "0x77f45fc7809034e700c8e691dd374b48de55ff28eada16c72064e3404f570ddd",
+   "value": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "d04"
+  },
+  "create:cancelled_funded": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 900, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_wi... (1534 characters)"
+   ],
+   "at": "2026-10-05T12:04:30Z",
+   "bounty_hash": "6fa872713234cbbd0d7dec42cb07ef03cce09910b0893d9747fdd802718eae88",
+   "bounty_id": "BNT-000001",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "funded, then given up before any submission",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000001\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:cancelled_funded",
+   "submit_by": "2026-10-08T12:03:45Z",
+   "tx": "0x86c4ea74e19c137ff5bae35b5995ca2b597237ae1028db078c62528bb44a4c3b",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:cancelled_unfunded": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 900, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_wi... (1534 characters)"
+   ],
+   "at": "2026-10-05T12:05:59Z",
+   "bounty_hash": "4fb38d62177bcf80936f6e98022d45b7c9d816d153877e41be1c82a4f109f448",
+   "bounty_id": "BNT-000002",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "given up before it was funded",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000002\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:cancelled_unfunded",
+   "submit_by": "2026-10-08T12:05:14Z",
+   "tx": "0x5f75cc8ebbcf6688dfc35ef49dde7de0aa0b7b1ad3bc5f6210fd2ffa742a931a",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:doubt_lost": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 1800, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_w... (1535 characters)"
+   ],
+   "at": "2026-10-05T12:06:51Z",
+   "bounty_hash": "9a51a14803c09b08f88ea0a91924ba294d890168a6047e5b7367e895e36e1651",
+   "bounty_id": "BNT-000003",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "an acceptance put in doubt and never restored",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000003\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:doubt_lost",
+   "submit_by": "2026-10-05T13:30:59Z",
+   "tx": "0x0f667c55372e763a02415abc9333b9e4033f77ca396a206ee4bba8fa37fa53ed",
+   "value": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:doubt_restored": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 1800, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_w... (1535 characters)"
+   ],
+   "at": "2026-10-05T12:08:17Z",
+   "bounty_hash": "494f0b18d056543fcbe02d0c79cc0d58a0d08668cac72e9057fa7c2382113944",
+   "bounty_id": "BNT-000004",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "an acceptance put in doubt and restored",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000004\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:doubt_restored",
+   "submit_by": "2026-10-08T12:07:32Z",
+   "tx": "0x5e9767cdc877d2d1979203682ed8e7fe8b71dbc357a3f061bd31771a6464aed1",
+   "value": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:queue": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 900, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_wi... (1534 characters)"
+   ],
+   "at": "2026-10-05T12:09:41Z",
+   "bounty_hash": "9ab26e750def31b9debb60a537b69d6bacba27e1caf252ecaae93cd878cb8c5d",
+   "bounty_id": "BNT-000005",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "three submissions, the second is paid",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000005\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:queue",
+   "submit_by": "2026-10-08T12:08:57Z",
+   "tx": "0xf71076267f8f399e5a5b6b8ceb467b4aebd23ba12ffe38e4cfea6cf05c4d6500",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "create:returned": {
+   "args": [
+    "{\"bond\": 1000000000000000, \"contest_window\": 900, \"document_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"endpoint_hosts\": [\"cdn.jsdelivr.net\", \"raw.githubusercontent.com\"], \"evaluate_wi... (1534 characters)"
+   ],
+   "at": "2026-10-05T12:11:07Z",
+   "bounty_hash": "41a6528457ce28ecef84cbc59e1741c3cd8376d8e7fd5ab7f852a63c7f5c5fc2",
+   "bounty_id": "BNT-000006",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "create_bounty",
+   "note": "five submissions, none accepted: the reward goes back",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"BNT-000006\\\"\"}}",
+   "status": "FINALIZED",
+   "step": "create:returned",
+   "submit_by": "2026-10-05T13:35:23Z",
+   "tx": "0x0fa27588544ac848fb9bbb0b29e6f6953c6169b7c920d6dc286f6bac9aa6ee2c",
+   "value": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "evaluate:D1": {
+   "applied": true,
+   "args": [
+    "SUB-000009"
+   ],
+   "at": "2026-10-05T12:28:54Z",
+   "evaluation_id": "EV-000007",
+   "expected_outcome": "ACCEPTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "evaluate",
+   "mode": "EVALUATE",
+   "note": "accepted; the documentation is then taken down and the sponsor contests: the acceptance is in doubt until the developer brings the document back and a round reads it again, and then it is paid",
+   "observed_outcome": "ACCEPTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000007\\\"\"}}",
+   "round": 1,
+   "served_by": [
+    "https://raw.githubusercontent.com/Olawalter/BountyAcceptance/live-evidence/fixtures/evidence/docs-withdrawn-a.html"
+   ],
+   "status": "FINALIZED",
+   "step": "evaluate:D1",
+   "tx": "0xd4a05144999cf135a4df1f17ef4fbb97eae4b7a94889021606bcf8dcab959014",
+   "value": "0",
+   "votes": [
+    "idle",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "keeper"
+  },
+  "evaluate:D2": {
+   "applied": true,
+   "args": [
+    "SUB-000010"
+   ],
+   "at": "2026-10-05T12:29:48Z",
+   "evaluation_id": "EV-000008",
+   "expected_outcome": "ACCEPTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "evaluate",
+   "mode": "EVALUATE",
+   "note": "accepted; the documentation is then taken down, the sponsor contests, and it never comes back: still in doubt when the window ends, it is rejected",
+   "observed_outcome": "ACCEPTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000008\\\"\"}}",
+   "round": 1,
+   "served_by": [
+    "https://raw.githubusercontent.com/Olawalter/BountyAcceptance/live-evidence/fixtures/evidence/docs-withdrawn-b.html"
+   ],
+   "status": "FINALIZED",
+   "step": "evaluate:D2",
+   "tx": "0x30484b9ce560d6943b1a90f65b0a639eb7caa4b957ad7f9ce2d8d0bb840bcd49",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "idle",
+    "agree"
+   ],
+   "wallet": "keeper"
+  },
+  "evaluate:Q2": {
+   "applied": true,
+   "args": [
+    "SUB-000002"
+   ],
+   "at": "2026-10-05T12:23:22Z",
+   "evaluation_id": "EV-000001",
+   "expected_outcome": "ACCEPTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "evaluate",
+   "mode": "EVALUATE",
+   "note": "second in the queue and satisfies every requirement: the sponsor contests, the reading is upheld, and once the first can no longer be accepted it is paid the whole reward",
+   "observed_outcome": "ACCEPTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000001\\\"\"}}",
+   "round": 1,
+   "served_by": [
+    "https://cdn.jsdelivr.net/gh/Olawalter/BountyAcceptance@57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/evidence/docs-complete.html"
+   ],
+   "status": "FINALIZED",
+   "step": "evaluate:Q2",
+   "tx": "0xa6a4d6d667414fb79fd02e956c1b216f70354fd5f5961a09322cba1533f63de7",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "wallet": "keeper"
+  },
+  "evaluate:Q3": {
+   "applied": true,
+   "args": [
+    "SUB-000003"
+   ],
+   "at": "2026-10-05T12:24:22Z",
+   "evaluation_id": "EV-000002",
+   "expected_outcome": "ACCEPTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "evaluate",
+   "mode": "EVALUATE",
+   "note": "third in the queue and also satisfies every requirement: an earlier submission is paid first, and this one gets its bond back",
+   "observed_outcome": "ACCEPTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000002\\\"\"}}",
+   "round": 1,
+   "served_by": [
+    "https://cdn.jsdelivr.net/gh/Olawalter/BountyAcceptance@57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/evidence/docs-complete.html"
+   ],
+   "status": "FINALIZED",
+   "step": "evaluate:Q3",
+   "tx": "0x7d948653ac52bfb3de181f7a4fddd290167153af5171a318ec43fe172890bcb4",
+   "value": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "keeper"
+  },
+  "evaluate:R1": {
+   "applied": true,
+   "args": [
+    "SUB-000004"
+   ],
+   "at": "2026-10-05T12:25:22Z",
+   "evaluation_id": "EV-000003",
+   "expected_outcome": "REJECTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "NOT_MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "evaluate",
+   "mode": "EVALUATE",
+   "note": "the service runs, the documentation never says how a client authenticates: rejected on the judged requirement, contested by the developer, rejected again",
+   "observed_outcome": "REJECTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "NOT_MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000003\\\"\"}}",
+   "round": 1,
+   "served_by": [
+    "https://cdn.jsdelivr.net/gh/Olawalter/BountyAcceptance@57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/evidence/docs-thin.html"
+   ],
+   "status": "FINALIZED",
+   "step": "evaluate:R1",
+   "tx": "0x8a3bbb8a776b401de9755899bae4994c0656851fbdee6076b0e0d918ff2251b7",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "keeper"
+  },
+  "evaluate:R2": {
+   "applied": true,
+   "args": [
+    "SUB-000005"
+   ],
+   "at": "2026-10-05T12:26:16Z",
+   "evaluation_id": "EV-000004",
+   "expected_outcome": "REJECTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "NOT_MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "evaluate",
+   "mode": "EVALUATE",
+   "note": "good documentation of a service whose status answer does not report the routes: the check that calls it is not met",
+   "observed_outcome": "REJECTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "NOT_MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000004\\\"\"}}",
+   "round": 1,
+   "served_by": [
+    "https://cdn.jsdelivr.net/gh/Olawalter/BountyAcceptance@57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/evidence/docs-complete.html"
+   ],
+   "status": "FINALIZED",
+   "step": "evaluate:R2",
+   "tx": "0xc4f9652e00af2168f4cc4e963696be9a9a414f4c5fe7eee46e36e0c3bc0c8749",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "idle"
+   ],
+   "wallet": "keeper"
+  },
+  "evaluate:R3": {
+   "applied": true,
+   "args": [
+    "SUB-000006"
+   ],
+   "at": "2026-10-05T12:27:05Z",
+   "evaluation_id": "EV-000005",
+   "expected_outcome": "REJECTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "NOT_MET"
+   },
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [
+    "docs:BODY"
+   ],
+   "method": "evaluate",
+   "mode": "EVALUATE",
+   "note": "the documentation addresses the evaluator: the judged requirement is not met without the panel, and the checks are still decided in code",
+   "observed_outcome": "REJECTED",
+   "observed_reason": "DOCUMENT_ADDRESSES_EVALUATOR",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "NOT_MET"
+   },
+   "panel_state": "SKIPPED",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000005\\\"\"}}",
+   "round": 1,
+   "served_by": [
+    "https://cdn.jsdelivr.net/gh/Olawalter/BountyAcceptance@57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/evidence/docs-planted.html"
+   ],
+   "status": "FINALIZED",
+   "step": "evaluate:R3",
+   "tx": "0x689fb3658dd9ebcb257d60c2920e3468af560e5a71fb30e3024aa751bb108fef",
+   "value": "0",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "wallet": "keeper"
+  },
+  "evaluate:R5": {
+   "applied": false,
+   "args": [
+    "SUB-000008"
+   ],
+   "at": "2026-10-05T12:27:59Z",
+   "evaluation_id": "EV-000006",
+   "expected": "recorded, not applied",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "evaluate",
+   "mode": "EVALUATE",
+   "note": "a service that is not there: the round decides nothing, and when the read-by time passes the submission lapses",
+   "observed_outcome": "DELIVERABLE_UNAVAILABLE",
+   "observed_reason": "ENDPOINT_UNREACHABLE",
+   "observed_states": {},
+   "panel_state": "SKIPPED",
+   "probes": [
+    "UNREACHABLE",
+    "UNREACHABLE",
+    "UNREACHABLE"
+   ],
+   "reason": "ENDPOINT_UNREACHABLE",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000006\\\"\"}}",
+   "round": 1,
+   "served_by": [
+    ""
+   ],
+   "status": "FINALIZED",
+   "step": "evaluate:R5",
+   "tx": "0x8819efe7c7b73c0a31682f1dbde73fe215e19429be0ff850ad82e8b836ddbb02",
+   "value": "0",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "keeper"
+  },
+  "faucet:d01": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:08Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d01",
+   "tx": "0xca3cb0abd38478fc2d4b708a82b590db3152785464d82a4adf9393f4e5782cf8"
+  },
+  "faucet:d02": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:10Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d02",
+   "tx": "0xe27c27ab2d48a3e37d63bbab969f8242ca8d525b2d1ac38aada77117c8234b3d"
+  },
+  "faucet:d03": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:13Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d03",
+   "tx": "0x000676911b3dc7e9e12577f1f33efa0c0e1b66424af673dc0e10d9d012e5b419"
+  },
+  "faucet:d04": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:15Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d04",
+   "tx": "0x171d6a198b859e440317733dd98aedad21900f3099cf7befb674f71d5a422824"
+  },
+  "faucet:d05": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:18Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d05",
+   "tx": "0x57ebcd1e92b99cd7ae90d78a51d91f47c61eaab5aee81331ea8bbaf8910f5d2e"
+  },
+  "faucet:d06": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:20Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d06",
+   "tx": "0xd859131cab863a80f84e01bc5bb5445bbbc1c813d3e14e6914be8116cb19eae4"
+  },
+  "faucet:d07": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:22Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d07",
+   "tx": "0xea94a334b400240a608fa8a6d79460fb73e7b410d3720427ff0e7aca1b15a303"
+  },
+  "faucet:d08": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:24Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d08",
+   "tx": "0x826e1108fb8a401772f2a5deafc0cfa045e807fe9ce3f1a15003d76e430f9cd6"
+  },
+  "faucet:d09": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:26Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d09",
+   "tx": "0x61e5ace9f7f815d4b20e21c30febe04c10d94dcea71a35dfbfd07d74090cac02"
+  },
+  "faucet:d10": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:28Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:d10",
+   "tx": "0xb561352a738c85022e62bb96a6d943b67e62071e92242696be712f0b87fc1158"
+  },
+  "faucet:sponsor": {
+   "after": "200000000000000000",
+   "at": "2026-10-05T12:03:03Z",
+   "before": "0",
+   "funded": "200000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:sponsor",
+   "tx": "0xdb982803e6b80d74567c0fd4bb57811e1eacc842ca06399c092940388316cc2f"
+  },
+  "faucet:stranger": {
+   "after": "10000000000000000",
+   "at": "2026-10-05T12:03:06Z",
+   "before": "0",
+   "funded": "10000000000000000",
+   "held": true,
+   "kind": "funding",
+   "step": "faucet:stranger",
+   "tx": "0x5ce2c13d59463d091183c6e164b662f2567319bd2aebf25abc43f88890407909"
+  },
+  "fund:cancelled_funded": {
+   "args": [
+    "BNT-000001"
+   ],
+   "at": "2026-10-05T12:05:14Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:cancelled_funded",
+   "tx": "0xb06d628eb6948d7895bd2d7ae69fb199c5688d6e3dfe4737bedaebfd3e3c5eb8",
+   "value": "20000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "fund:doubt_lost": {
+   "args": [
+    "BNT-000003"
+   ],
+   "at": "2026-10-05T12:07:32Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:doubt_lost",
+   "tx": "0x45815af001e8764cb4cf7a4c9c078a978994a461b3fd6c65cef3ff74f8405bc9",
+   "value": "20000000000000000",
+   "votes": [
+    "idle",
+    "idle",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "fund:doubt_restored": {
+   "args": [
+    "BNT-000004"
+   ],
+   "at": "2026-10-05T12:08:57Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:doubt_restored",
+   "tx": "0x5bbcf72e963bf7d4bc04e04cf5f53ad0753ae3f8b281e7ffd4c0671f72ec5a0d",
+   "value": "20000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "sponsor"
+  },
+  "fund:queue": {
+   "args": [
+    "BNT-000005"
+   ],
+   "at": "2026-10-05T12:10:23Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:queue",
+   "tx": "0x7085f7707d311904b1fb463fbe5f126a5751e7717308cddb04b594e430ec2bc7",
+   "value": "20000000000000000",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "sponsor"
+  },
+  "fund:returned": {
+   "args": [
+    "BNT-000006"
+   ],
+   "at": "2026-10-05T12:11:50Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "fund",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"FUNDED\\\"\"}}",
+   "status": "FUNDED",
+   "step": "fund:returned",
+   "tx": "0x2813cfe72130e891c519793550e14a9fa79500ca359935d4c0d3a1e432fe8e7b",
+   "value": "20000000000000000",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "sponsor"
+  },
+  "outage:down": {
+   "at": "2026-10-05T12:33:34Z",
+   "held": true,
+   "kind": "check",
+   "note": "the branch no longer serves either document",
+   "step": "outage:down"
+  },
+  "outage:restored": {
+   "at": "2026-10-05T12:36:54Z",
+   "held": true,
+   "kind": "check",
+   "note": "the branch serves the first document again",
+   "step": "outage:restored"
+  },
+  "outage:serving": {
+   "at": "2026-10-05T12:13:50Z",
+   "held": true,
+   "kind": "check",
+   "note": "the branch serves both documents",
+   "step": "outage:serving"
+  },
+  "refuse:contest_in_doubt": {
+   "args": [
+    "SUB-000009"
+   ],
+   "at": "2026-10-05T12:35:59Z",
+   "because": "while an acceptance is in doubt nobody contests it",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] the acceptance is in doubt: only the developer's restore reads it again\"}",
+   "expect": "the acceptance is in doubt",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "contest",
+   "status": "FINALIZED",
+   "step": "refuse:contest_in_doubt",
+   "tx": "0x2064eb0aa3fc16c97600f75da46833b18b5f16450d23b29ffa0207e15fdbd8e0",
+   "wallet": "sponsor"
+  },
+  "refuse:restore_by_another": {
+   "args": [
+    "SUB-000009"
+   ],
+   "at": "2026-10-05T12:36:44Z",
+   "because": "only the developer restores its deliverable",
+   "error": "{\"status\": \"rollback\", \"payload\": \"[EXPECTED] only the developer restores its deliverable\"}",
+   "expect": "only the developer restores",
+   "held": true,
+   "kind": "refusal",
+   "leader_execution": "ERROR",
+   "method": "restore",
+   "status": "FINALIZED",
+   "step": "refuse:restore_by_another",
+   "tx": "0x25e646c9579efcb44888c4251e9d9bbff26ee0b3f8f1f2b270ca5aaa0ad1b974",
+   "wallet": "keeper"
+  },
+  "restore:D1": {
+   "applied": true,
+   "args": [
+    "SUB-000009"
+   ],
+   "at": "2026-10-05T12:37:51Z",
+   "evaluation_id": "EV-000013",
+   "expected_outcome": "ACCEPTED",
+   "expected_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "held": true,
+   "in_doubt": false,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "markers": [],
+   "method": "restore",
+   "mode": "RESTORE",
+   "note": "accepted; the documentation is then taken down and the sponsor contests: the acceptance is in doubt until the developer brings the document back and a round reads it again, and then it is paid",
+   "observed_outcome": "ACCEPTED",
+   "observed_reason": "EVALUATED",
+   "observed_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "panel_state": "READ",
+   "probes": [
+    "ANSWERED",
+    "ANSWERED",
+    "ANSWERED"
+   ],
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"EV-000013\\\"\"}}",
+   "round": 3,
+   "served_by": [
+    "https://raw.githubusercontent.com/Olawalter/BountyAcceptance/live-evidence/fixtures/evidence/docs-withdrawn-a.html"
+   ],
+   "status": "FINALIZED",
+   "step": "restore:D1",
+   "tx": "0x58a12897d9ca2303b3d87dab564de4a7bfa11e93bcaaaa541ebc7559f6552014",
+   "value": "0",
+   "verdict": "ACCEPTED",
+   "votes": [
+    "agree",
+    "idle",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d09"
+  },
+  "submit:D1": {
+   "args": [
+    "BNT-000004",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"97a59ee2009bf3f8dd82addfc6340e6c3863d1... (358 characters)"
+   ],
+   "at": "2026-10-05T12:21:27Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:20:45Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000009\\\"\"}}",
+   "sequence": 1,
+   "status": "FINALIZED",
+   "step": "submit:D1",
+   "submission_id": "SUB-000009",
+   "tx": "0x321f9f06855d711c8f0412ddac1d5cb3d6732e3bcb96dc567adf133d2b1e5df6",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "d09"
+  },
+  "submit:D2": {
+   "args": [
+    "BNT-000003",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"a070e0157aa735dc8ae0a43fb98bd7cb734d0f... (358 characters)"
+   ],
+   "at": "2026-10-05T12:22:11Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:21:34Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000010\\\"\"}}",
+   "sequence": 1,
+   "status": "FINALIZED",
+   "step": "submit:D2",
+   "submission_id": "SUB-000010",
+   "tx": "0x1d081deb4a01ca81f89c51f18c3c1d33eaa88340386690c018bce2f990bbd392",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d10"
+  },
+  "submit:Q1": {
+   "args": [
+    "BNT-000005",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/absent\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f... (520 characters)"
+   ],
+   "at": "2026-10-05T12:14:34Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T14:13:57Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000001\\\"\"}}",
+   "sequence": 1,
+   "status": "FINALIZED",
+   "step": "submit:Q1",
+   "submission_id": "SUB-000001",
+   "tx": "0x62a7694b82cfce688d54b06ea6e941c4b8d29e97c66ce025879af1c3e5e3ad0a",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "idle",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d01"
+  },
+  "submit:Q2": {
+   "args": [
+    "BNT-000005",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f52... (518 characters)"
+   ],
+   "at": "2026-10-05T12:15:25Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T14:14:41Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000002\\\"\"}}",
+   "sequence": 2,
+   "status": "FINALIZED",
+   "step": "submit:Q2",
+   "submission_id": "SUB-000002",
+   "tx": "0x9e8f6beb3b7fb0e497f9ca8b14238c80e3ca0e95ce85b693da033e4345b7959c",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "agree"
+   ],
+   "wallet": "d02"
+  },
+  "submit:Q3": {
+   "args": [
+    "BNT-000005",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f52... (518 characters)"
+   ],
+   "at": "2026-10-05T12:16:18Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T14:15:32Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000003\\\"\"}}",
+   "sequence": 3,
+   "status": "FINALIZED",
+   "step": "submit:Q3",
+   "submission_id": "SUB-000003",
+   "tx": "0x17ab833a0a05f16bbcfd6b047b16d1b947646bdc60427b2f4dbab11865d0617b",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d03"
+  },
+  "submit:R1": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"7e56e1c42371ab457f78c2ab7dc5c106bcd041... (510 characters)"
+   ],
+   "at": "2026-10-05T12:17:11Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:16:25Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000004\\\"\"}}",
+   "sequence": 1,
+   "status": "FINALIZED",
+   "step": "submit:R1",
+   "submission_id": "SUB-000004",
+   "tx": "0x9dc20963824af547a04ab6a6bc54f1f86ab796d7e1eb9b0925c91d36b14c8d99",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "idle",
+    "idle"
+   ],
+   "wallet": "d04"
+  },
+  "submit:R2": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/nokey\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f5... (519 characters)"
+   ],
+   "at": "2026-10-05T12:17:57Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:17:18Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000005\\\"\"}}",
+   "sequence": 2,
+   "status": "FINALIZED",
+   "step": "submit:R2",
+   "submission_id": "SUB-000005",
+   "tx": "0x5ea8dbe02ee99bfb5da62f4fd619afd9699d99e9d2e3de74ef7c42121d0a8b2f",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d05"
+  },
+  "submit:R3": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"d6d1d8caa18a3304841db7bba24274a382e0ce... (516 characters)"
+   ],
+   "at": "2026-10-05T12:18:45Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:18:04Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000006\\\"\"}}",
+   "sequence": 3,
+   "status": "FINALIZED",
+   "step": "submit:R3",
+   "submission_id": "SUB-000006",
+   "tx": "0x405de935bb6391db7841ddbd8a0dcfe02125216bd31bde9c1af1ec5b7632762d",
+   "value": "1000000000000000",
+   "votes": [
+    "idle",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d06"
+  },
+  "submit:R4": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://raw.githubusercontent.com/Olawalter/BountyAcceptance/57ee983af670898ac1d4e7f5d6d6a9f3210b3fde/fixtures/api/good\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f52... (518 characters)"
+   ],
+   "at": "2026-10-05T12:19:47Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:18:57Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000007\\\"\"}}",
+   "sequence": 4,
+   "status": "FINALIZED",
+   "step": "submit:R4",
+   "submission_id": "SUB-000007",
+   "tx": "0x289183e6ff48a3c6ee279d530c0bb59b1dc722be2ebd1a1b11aa76aa700edf57",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "idle",
+    "agree",
+    "agree",
+    "idle"
+   ],
+   "wallet": "d07"
+  },
+  "submit:R5": {
+   "args": [
+    "BNT-000006",
+    "{\"fields\": {\"api\": \"https://no-such-service.cdn.jsdelivr.net/timetable\", \"docs\": {\"sha256\": \"2bcd1023f4103202eae2588332160d5bec8f52e616a294949d74e1efc22ccbdc\", \"urls\": [\"https://cdn.jsdelivr.net/gh/Ol... (449 characters)"
+   ],
+   "at": "2026-10-05T12:20:38Z",
+   "held": true,
+   "kind": "write",
+   "leader_execution": "SUCCESS",
+   "method": "submit",
+   "read_by": "2026-10-05T13:19:54Z",
+   "result": "{\"status\": \"return\", \"payload\": {\"readable\": \"\\\"SUB-000008\\\"\"}}",
+   "sequence": 5,
+   "status": "FINALIZED",
+   "step": "submit:R5",
+   "submission_id": "SUB-000008",
+   "tx": "0x4119f54b7f94376bb771a5daf61f3263ce2e2eb021e2f27f3a4960db63496db2",
+   "value": "1000000000000000",
+   "votes": [
+    "agree",
+    "agree",
+    "agree",
+    "agree",
+    "agree"
+   ],
+   "wallet": "d08"
+  }
+ },
+ "summary": {
+  "missed": [],
+  "outcomes_checked": 51,
+  "outcomes_held": 51,
+  "refusals": 2,
+  "refusals_held": 2,
+  "steps": 53,
+  "transactions": 50
+ }
+}

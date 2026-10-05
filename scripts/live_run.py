@@ -44,6 +44,7 @@ BRANCH_CLONE = ROOT / ".data" / "evidence-branch"
 TRANSCRIPT = ROOT / "deploy" / "live_run_transcript.json"
 LOG = ROOT / "deploy" / "live_run.log"
 RPC = "https://studio.genlayer.com/api"
+BRANCH_CACHE = 330                # seconds the raw host may go on serving a branch as it was
 WAIT = dict(interval=5000, retries=300)
 PHASES = ("wallets", "bounties", "submit", "evaluate", "contest", "outage", "queue",
           "settle", "lapse", "close", "withdraw", "refusals", "custody")
@@ -390,9 +391,16 @@ def branch_serve(cases: dict, present: list, message: str):
     git("push", "-q", "-f", "origin", branch)
 
 
-def wait_served(url: str, want_status: int, want_sha: str = "", limit: int = 900) -> bool:
-    """Wait until a branch URL answers as it should: the raw host caches a
-    branch for some minutes."""
+def wait_served(url: str, want_status: int, want_sha: str = "", limit: int = 900,
+                settle: int = 0) -> bool:
+    """Wait until a branch URL answers as it should. The raw host caches a
+    branch for some minutes, and each of its edges has a cache of its own: what
+    this machine sees is not yet what a validator sees. `settle` waits out the
+    cache's whole lifetime first, so that every edge has let go of the old
+    answer."""
+    if settle > 0:
+        log("  letting the host's cache run out: " + str(settle) + "s")
+        time.sleep(settle)
     start = time.time()
     while time.time() - start < limit:
         status, digest = fetch_status(url)
@@ -493,7 +501,9 @@ def phase_submit(chain: Chain, cases: dict, template: dict, raw_base: str):
         on_branch = [c["docs"] for c in cases["cases"] if c["docs_served"] == "branch"]
         branch_serve(cases, [d["document"] for d in on_branch], "Serve the documents")
         base = branch_base(raw_base, cases["evidence_branch"])
-        served = all(wait_served(base + d["document"], 200, d["sha256"]) for d in on_branch)
+        served = all(wait_served(base + d["document"], 200, d["sha256"],
+                                 settle=BRANCH_CACHE if index == 0 else 0)
+                     for index, d in enumerate(on_branch))
         chain.check(step, served, note="the branch serves both documents")
     for case in cases["cases"]:
         code = case["case"]
@@ -582,7 +592,7 @@ def phase_outage(chain: Chain, cases: dict, raw_base: str):
     step = "outage:down"
     if not chain.transcript.has(step):
         branch_serve(cases, [], "Take the documents down")
-        gone = wait_served(base + kept["docs"]["document"], 404) \
+        gone = wait_served(base + kept["docs"]["document"], 404, settle=BRANCH_CACHE) \
             and wait_served(base + lost["docs"]["document"], 404)
         chain.check(step, gone, note="the branch no longer serves either document")
     for code in ("D1", "D2"):
@@ -607,7 +617,8 @@ def phase_outage(chain: Chain, cases: dict, raw_base: str):
     step = "outage:restored"
     if not chain.transcript.has(step):
         branch_serve(cases, [kept["docs"]["document"]], "Bring one document back")
-        back = wait_served(base + kept["docs"]["document"], 200, kept["docs"]["sha256"])
+        back = wait_served(base + kept["docs"]["document"], 200, kept["docs"]["sha256"],
+                           settle=BRANCH_CACHE)
         chain.check(step, back, note="the branch serves the first document again")
     step = "restore:D1"
     if not chain.transcript.done(step):
