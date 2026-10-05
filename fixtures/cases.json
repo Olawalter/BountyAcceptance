@@ -18,7 +18,7 @@
    "contest_window": 1800,
    "ends": "RETURNED",
    "evaluate_window": 3600,
-   "lasts": 5100,
+   "lasts": 4200,
    "note": "an acceptance put in doubt and never restored"
   },
   "doubt_restored": {
@@ -39,7 +39,7 @@
    "contest_window": 900,
    "ends": "RETURNED",
    "evaluate_window": 3600,
-   "lasts": 5100,
+   "lasts": 4200,
    "note": "five submissions, none accepted: the reward goes back"
   }
  },
