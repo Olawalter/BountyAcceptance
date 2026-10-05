@@ -1,0 +1,81 @@
+{
+ "bond": 1000000000000000,
+ "contest_window": 900,
+ "document_hosts": [
+  "cdn.jsdelivr.net",
+  "raw.githubusercontent.com"
+ ],
+ "endpoint_hosts": [
+  "cdn.jsdelivr.net",
+  "raw.githubusercontent.com"
+ ],
+ "evaluate_window": 3600,
+ "fields": [
+  {
+   "id": "api",
+   "label": "Base URL of the running API",
+   "required": true,
+   "type": "ENDPOINT"
+  },
+  {
+   "id": "docs",
+   "label": "Documentation",
+   "required": true,
+   "type": "DOCUMENT"
+  }
+ ],
+ "requirements": [
+  {
+   "check": {
+    "field": "api",
+    "path": "/v1/status",
+    "type": "RESPONDS",
+    "value": 200
+   },
+   "id": "r1",
+   "kind": "CHECK",
+   "text": "GET /v1/status answers 200."
+  },
+  {
+   "check": {
+    "field": "api",
+    "path": "/v1/status",
+    "type": "RESPONSE_JSON_KEY",
+    "value": "routes"
+   },
+   "id": "r2",
+   "kind": "CHECK",
+   "text": "The status answer is a JSON object that reports the routes."
+  },
+  {
+   "check": {
+    "field": "api",
+    "path": "/v1/no-such-route",
+    "type": "RESPONDS",
+    "value": 404
+   },
+   "id": "r3",
+   "kind": "CHECK",
+   "text": "An unknown route answers 404."
+  },
+  {
+   "check": {
+    "field": "docs",
+    "type": "MIN_WORDS",
+    "value": 20
+   },
+   "id": "r4",
+   "kind": "CHECK",
+   "text": "The documentation is more than a stub."
+  },
+  {
+   "id": "r5",
+   "kind": "JUDGED",
+   "text": "The documentation explains how a client authenticates and what happens when a key is revoked."
+  }
+ ],
+ "reward": 20000000000000000,
+ "submit_by": "2099-01-01T00:00:00Z",
+ "summary": "A read-only timetable service for a harbour ferry operator. TEST / DEMONSTRATION ONLY - NOT A REAL SERVICE. Synthetic data: the operator, the service and these documents exist only in this repository.",
+ "title": "Ferry timetable API (test only)"
+}

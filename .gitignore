@@ -1,0 +1,23 @@
+# environment and keys - never commit secrets
+.env
+.env.*
+!.env.example
+*.env
+.data/
+*.key
+keystore*.json
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# genlayer tooling
+.gltest_cache/
+artifacts/
+
+# stderr of long runs; the run logs and transcripts under deploy/ are evidence and are committed
+deploy/**/*.err

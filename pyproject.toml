@@ -1,0 +1,22 @@
+[project]
+name = "bounty-acceptance"
+version = "0.1.0"
+description = "An open bounty that pays the first deliverable to satisfy requirements frozen in advance - a standalone GenLayer Intelligent Contract"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests/direct"]
+addopts = "-p no:cacheprovider"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+# fixtures/ holds evidence documents that merely look like code
+extend-exclude = ["fixtures"]
+
+[tool.ruff.lint]
+select = ["E9", "E7", "F"]
+# The contract imports the GenLayer SDK with a star import, as the SDK's own
+# examples do; lambdas bind small assertion helpers in tests.
+ignore = ["F403", "F405", "E731"]

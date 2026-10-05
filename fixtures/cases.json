@@ -1,0 +1,272 @@
+{
+ "bounties": {
+  "cancelled_funded": {
+   "contest_window": 900,
+   "ends": "RETURNED",
+   "evaluate_window": 3600,
+   "lasts": 259200,
+   "note": "funded, then given up before any submission"
+  },
+  "cancelled_unfunded": {
+   "contest_window": 900,
+   "ends": "CANCELLED",
+   "evaluate_window": 3600,
+   "lasts": 259200,
+   "note": "given up before it was funded"
+  },
+  "doubt_lost": {
+   "contest_window": 1800,
+   "ends": "RETURNED",
+   "evaluate_window": 3600,
+   "lasts": 5100,
+   "note": "an acceptance put in doubt and never restored"
+  },
+  "doubt_restored": {
+   "contest_window": 1800,
+   "ends": "RELEASED",
+   "evaluate_window": 3600,
+   "lasts": 259200,
+   "note": "an acceptance put in doubt and restored"
+  },
+  "queue": {
+   "contest_window": 900,
+   "ends": "RELEASED",
+   "evaluate_window": 7200,
+   "lasts": 259200,
+   "note": "three submissions, the second is paid"
+  },
+  "returned": {
+   "contest_window": 900,
+   "ends": "RETURNED",
+   "evaluate_window": 3600,
+   "lasts": 5100,
+   "note": "five submissions, none accepted: the reward goes back"
+  }
+ },
+ "cases": [
+  {
+   "api": "api/absent",
+   "bounty": "queue",
+   "case": "Q1",
+   "developer": "d01",
+   "docs": {
+    "document": "evidence/docs-complete.html",
+    "sha256": "2bcd1023f4103202eae2588332160d5bec8f52e616a294949d74e1efc22ccbdc"
+   },
+   "docs_served": "pinned",
+   "expect_bond": "FORFEITED_TO_SPONSOR",
+   "expect_outcome": "REJECTED",
+   "expect_reason": "EVALUATED",
+   "expect_result": "REJECTED",
+   "expect_states": {
+    "r1": "NOT_MET",
+    "r2": "NOT_MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "note": "first in the queue with a service that is not there yet: it is read late and rejected, and until its time has run out nobody behind it is paid"
+  },
+  {
+   "api": "api/good",
+   "bounty": "queue",
+   "case": "Q2",
+   "developer": "d02",
+   "docs": {
+    "document": "evidence/docs-complete.html",
+    "sha256": "2bcd1023f4103202eae2588332160d5bec8f52e616a294949d74e1efc22ccbdc"
+   },
+   "docs_served": "pinned",
+   "expect_bond": "RETURNED_TO_DEVELOPER",
+   "expect_outcome": "ACCEPTED",
+   "expect_reason": "EVALUATED",
+   "expect_result": "PAID",
+   "expect_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "note": "second in the queue and satisfies every requirement: the sponsor contests, the reading is upheld, and once the first can no longer be accepted it is paid the whole reward"
+  },
+  {
+   "api": "api/good",
+   "bounty": "queue",
+   "case": "Q3",
+   "developer": "d03",
+   "docs": {
+    "document": "evidence/docs-complete.html",
+    "sha256": "2bcd1023f4103202eae2588332160d5bec8f52e616a294949d74e1efc22ccbdc"
+   },
+   "docs_served": "pinned",
+   "expect_bond": "RETURNED_TO_DEVELOPER",
+   "expect_outcome": "ACCEPTED",
+   "expect_reason": "AN_EARLIER_SUBMISSION_WAS_PAID",
+   "expect_result": "OUTRUN",
+   "expect_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "note": "third in the queue and also satisfies every requirement: an earlier submission is paid first, and this one gets its bond back"
+  },
+  {
+   "api": "api/good",
+   "bounty": "returned",
+   "case": "R1",
+   "developer": "d04",
+   "docs": {
+    "document": "evidence/docs-thin.html",
+    "sha256": "7e56e1c42371ab457f78c2ab7dc5c106bcd0417294c5f06e842bfe1a71155016"
+   },
+   "docs_served": "pinned",
+   "expect_bond": "FORFEITED_TO_SPONSOR",
+   "expect_outcome": "REJECTED",
+   "expect_reason": "EVALUATED",
+   "expect_result": "REJECTED",
+   "expect_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "NOT_MET"
+   },
+   "note": "the service runs, the documentation never says how a client authenticates: rejected on the judged requirement, contested by the developer, rejected again"
+  },
+  {
+   "api": "api/nokey",
+   "bounty": "returned",
+   "case": "R2",
+   "developer": "d05",
+   "docs": {
+    "document": "evidence/docs-complete.html",
+    "sha256": "2bcd1023f4103202eae2588332160d5bec8f52e616a294949d74e1efc22ccbdc"
+   },
+   "docs_served": "pinned",
+   "expect_bond": "FORFEITED_TO_SPONSOR",
+   "expect_outcome": "REJECTED",
+   "expect_reason": "EVALUATED",
+   "expect_result": "REJECTED",
+   "expect_states": {
+    "r1": "MET",
+    "r2": "NOT_MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "note": "good documentation of a service whose status answer does not report the routes: the check that calls it is not met"
+  },
+  {
+   "api": "api/good",
+   "bounty": "returned",
+   "case": "R3",
+   "developer": "d06",
+   "docs": {
+    "document": "evidence/docs-planted.html",
+    "sha256": "d6d1d8caa18a3304841db7bba24274a382e0cecabf8a1fc6ad3c004b692f08be"
+   },
+   "docs_served": "pinned",
+   "expect_bond": "FORFEITED_TO_SPONSOR",
+   "expect_outcome": "REJECTED",
+   "expect_reason": "EVALUATED",
+   "expect_result": "REJECTED",
+   "expect_round_reason": "DOCUMENT_ADDRESSES_EVALUATOR",
+   "expect_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "NOT_MET"
+   },
+   "note": "the documentation addresses the evaluator: the judged requirement is not met without the panel, and the checks are still decided in code"
+  },
+  {
+   "api": "api/good",
+   "bounty": "returned",
+   "case": "R4",
+   "developer": "d07",
+   "docs": {
+    "document": "evidence/docs-complete.html",
+    "sha256": "2bcd1023f4103202eae2588332160d5bec8f52e616a294949d74e1efc22ccbdc"
+   },
+   "docs_served": "pinned",
+   "expect_bond": "FORFEITED_TO_SPONSOR",
+   "expect_reason": "NOT_EVALUATED_BY_READ_BY",
+   "expect_result": "NOT_READ",
+   "note": "a deliverable nobody asks to have evaluated: when its read-by time passes it lapses, and its bond goes to the sponsor"
+  },
+  {
+   "api": "unreachable",
+   "bounty": "returned",
+   "case": "R5",
+   "developer": "d08",
+   "docs": {
+    "document": "evidence/docs-complete.html",
+    "sha256": "2bcd1023f4103202eae2588332160d5bec8f52e616a294949d74e1efc22ccbdc"
+   },
+   "docs_served": "pinned",
+   "expect_bond": "FORFEITED_TO_SPONSOR",
+   "expect_reason": "DELIVERABLE_NOT_THERE_WHEN_ASKED",
+   "expect_result": "NOT_READ",
+   "expect_round_reason": "ENDPOINT_UNREACHABLE",
+   "note": "a service that is not there: the round decides nothing, and when the read-by time passes the submission lapses"
+  },
+  {
+   "api": "api/good",
+   "bounty": "doubt_restored",
+   "case": "D1",
+   "developer": "d09",
+   "docs": {
+    "document": "evidence/docs-withdrawn-a.html",
+    "sha256": "97a59ee2009bf3f8dd82addfc6340e6c3863d1b1b4502a358831deaadfdf4145"
+   },
+   "docs_served": "branch",
+   "expect_bond": "RETURNED_TO_DEVELOPER",
+   "expect_outcome": "ACCEPTED",
+   "expect_reason": "EVALUATED",
+   "expect_result": "PAID",
+   "expect_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "note": "accepted; the documentation is then taken down and the sponsor contests: the acceptance is in doubt until the developer brings the document back and a round reads it again, and then it is paid"
+  },
+  {
+   "api": "api/good",
+   "bounty": "doubt_lost",
+   "case": "D2",
+   "developer": "d10",
+   "docs": {
+    "document": "evidence/docs-withdrawn-b.html",
+    "sha256": "a070e0157aa735dc8ae0a43fb98bd7cb734d0fff5f3080dbe7bc2cbe253fad4e"
+   },
+   "docs_served": "branch",
+   "expect_bond": "FORFEITED_TO_SPONSOR",
+   "expect_outcome": "ACCEPTED",
+   "expect_reason": "DELIVERABLE_GONE_WHILE_CONTESTED",
+   "expect_result": "REJECTED",
+   "expect_states": {
+    "r1": "MET",
+    "r2": "MET",
+    "r3": "MET",
+    "r4": "MET",
+    "r5": "MET"
+   },
+   "note": "accepted; the documentation is then taken down, the sponsor contests, and it never comes back: still in doubt when the window ends, it is rejected"
+  }
+ ],
+ "evidence_branch": "live-evidence",
+ "missing_path": "/v1/no-such-route",
+ "origins": [
+  "cdn.jsdelivr.net",
+  "raw.githubusercontent.com"
+ ],
+ "status_path": "/v1/status",
+ "unreachable_base": "https://no-such-service.cdn.jsdelivr.net/timetable"
+}
